@@ -7,11 +7,12 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
+
 export default function ({ events }: { events: EventWithCategory[] }): string[] {
-    return [];
+    const categories = events.flatMap((event) => event.categories);
+    return [...new Set(categories)].sort();
 }
-*/
+
 
 // used interfaces, do not touch
 export interface EventWithCategory {

@@ -8,11 +8,12 @@
  */
 
 // ↓ uncomment bellow lines and add your response!
-/*
+
 export default function ({ events }: { events: EventDatetime[] }): EventDatetime[] {
-    return [];
+    const sorted = events.sort((a,b)=> Date.parse(a.startDatetime)- Date.parse(b.startDatetime));
+    return sorted
 }
-*/
+
 
 // used interfaces, do not touch
 export interface EventDatetime {
